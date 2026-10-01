@@ -1,0 +1,21 @@
+[project]
+name = "StockAPI"
+version = "0.1.0"
+description = "A small FastAPI service for S&P 500 market data"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi",
+    "pydantic>=2",
+    "uvicorn[standard]",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "ruff",
+]
+
+[tool.uv]
+package = false
