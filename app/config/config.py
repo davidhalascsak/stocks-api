@@ -6,7 +6,7 @@ from pydantic import BaseModel
 
 
 config_parser = configparser.ConfigParser()
-config_path = Path(f"{__file__}/../../config.ini")
+config_path = Path(__file__).resolve().parents[2] / "config.ini"
 with config_path.open(encoding="utf-8") as config_file:
     config_parser.read_file(config_file)
 

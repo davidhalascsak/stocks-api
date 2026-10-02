@@ -42,26 +42,25 @@ The project is intentionally staged. Each phase introduces just enough new mater
 | Phase | Focus | Outcome |
 | --- | --- | --- |
 | 1 | Project setup | Clean FastAPI app structure |
-| 2 | Basic API | `/health` and mocked stock responses |
+| 2 | S&P 500 source | Dynamic company discovery |
 | 3 | PostgreSQL | Persistent company and price data |
-| 4 | S&P 500 source | Dynamic company discovery |
-| 5 | Sequential ingestion | Baseline benchmark |
-| 6 | Async HTTP | Understand event loop and non-blocking I/O |
-| 7 | `asyncio.gather()` | Concurrent fetches |
-| 8 | Semaphore | Limit concurrent requests |
-| 9 | Timeouts | Handle slow or hung requests |
-| 10 | Retries + backoff | Recover from transient failures |
-| 11 | Rate limiting | Control request frequency |
-| 12 | Partial failures | Continue on per-ticker errors |
-| 13 | DB backpressure | Protect Postgres under load |
-| 14 | Background jobs | Async ingestion job flow |
-| 15 | Cancellation | Cancel in-flight jobs safely |
-| 16 | Redis caching | Cache reads and report endpoints |
-| 17 | Cache invalidation | Handle staleness cleanly |
-| 18 | Reporting | Sector and market summaries |
-| 19 | Testing | Unit, async, and integration tests |
-| 20 | Observability | Logs, metrics, traces |
-| 21 | Docker | Run the stack locally |
+| 4 | Sequential ingestion | Baseline benchmark |
+| 5 | Async HTTP | Understand event loop and non-blocking I/O |
+| 6 | `asyncio.gather()` | Concurrent fetches |
+| 7 | Semaphore | Limit concurrent requests |
+| 8 | Timeouts | Handle slow or hung requests |
+| 9 | Retries + backoff | Recover from transient failures |
+| 10 | Rate limiting | Control request frequency |
+| 11 | Partial failures | Continue on per-ticker errors |
+| 12 | DB backpressure | Protect Postgres under load |
+| 13 | Background jobs | Async ingestion job flow |
+| 14 | Cancellation | Cancel in-flight jobs safely |
+| 15 | Redis caching | Cache reads and report endpoints |
+| 16 | Cache invalidation | Handle staleness cleanly |
+| 17 | Reporting | Sector and market summaries |
+| 18 | Testing | Unit, async, and integration tests |
+| 19 | Observability | Logs, metrics, traces |
+| 20 | Docker | Run the stack locally |
 
 ---
 
