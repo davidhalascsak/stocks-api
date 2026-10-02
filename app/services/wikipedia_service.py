@@ -1,24 +1,15 @@
 from __future__ import annotations
 
-import httpx
 from bs4 import BeautifulSoup
 
-from app.models.ticker import TickerListResponse
-
-SP500_URL = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
-USER_AGENT = "StockAPI/0.1 (https://github.com/davidhalascsak/stocks-api)"
+from app.client.wikipedia_client import fetch_sp500_page
+from app.dto.ticker import TickerListResponse
 
 
 async def fetch_sp500_tickers() -> TickerListResponse:
     """Fetch and map the current S&P 500 ticker list from Wikipedia."""
-    async with httpx.AsyncClient(
-        timeout=30.0,
-        headers={"User-Agent": USER_AGENT},
-    ) as client:
-        response = await client.get(SP500_URL)
-        response.raise_for_status()
-
-    soup = BeautifulSoup(response.text, "html.parser")
+    page_html = await fetch_sp500_page()
+    soup = BeautifulSoup(page_html, "html.parser")
     table = soup.find("table", class_="wikitable")
     if table is None:
         raise ValueError("No HTML tables were found on the S&P 500 page.")
