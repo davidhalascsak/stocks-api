@@ -26,4 +26,4 @@ async def test_fetch_sp500_tickers_extracts_symbols(monkeypatch):
 
     tickers = await fetch_sp500_tickers()
 
-    assert tickers == TickerListResponse(count=2, tickers=["AAPL", "MSFT"])
+    assert tickers == TickerListResponse(tickers=["AAPL", "MSFT"])

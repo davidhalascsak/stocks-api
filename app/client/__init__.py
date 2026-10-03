@@ -1,0 +1,1 @@
+USER_AGENT = "StockAPI/0.1 (https://github.com/davidhalascsak/stocks-api)"

@@ -33,4 +33,4 @@ async def fetch_sp500_tickers() -> TickerListResponse:
             tickers.append(ticker)
 
     unique_tickers = sorted(set(tickers))
-    return TickerListResponse(count=len(unique_tickers), tickers=unique_tickers)
+    return TickerListResponse(tickers=unique_tickers)

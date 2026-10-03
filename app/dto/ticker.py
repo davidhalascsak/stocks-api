@@ -1,6 +1,5 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 
 class TickerListResponse(BaseModel):
-    count: int = Field(..., ge=0)
     tickers: list[str]
